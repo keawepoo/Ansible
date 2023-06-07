@@ -1,6 +1,7 @@
 ---
   - name: nano
     hosts: Linux
+    become: true
     tasks:
       - name: ensure nano is there
         apt:
