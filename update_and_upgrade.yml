@@ -1,8 +1,12 @@
 ---
 - hosts: Linux
   become: true
-
-  tasks:
-  - name: show
-    ansible.netcommon.cli_command:
-    command: show version
+  
+  - name: nano
+    hosts: Linux
+    become: true
+    tasks:
+      - name: ensure nano is there
+        apt:
+         name: nano
+         state: latest
