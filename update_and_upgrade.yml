@@ -1,13 +1,9 @@
-- name: nano
-  hosts: Linux
-  become: true
-- name: Update and upgrade apt packages
-  apt: null
-  upgrade: 'yes'
-  update_cache: 'yes'
-- name: Get docker script
-  uri: null
-  url: 'https://get.docker.com'
-  method: GET
-  dest: get-docker.sh
-  follow_redirects: safe
+---
+  - name: nano
+    hosts: Linux
+    become: true
+    - name: Update and upgrade apt packages
+        apt:
+          upgrade: yes
+          update_cache: yes
+          cache_valid_time: 86400 #One day
