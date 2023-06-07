@@ -1,8 +1,15 @@
   - name: nano
     hosts: Linux
     become: true
-    tasks:
-      - name: ensure nano is there
+    - tasks:
+      - name: Update and upgrade apt packages
         apt:
-         name: nano
-         state: latest
+          upgrade: yes
+          update_cache: yes
+
+      - name: Get docker script
+        uri:
+          url: 'https://get.docker.com'
+          method: GET
+          dest: get-docker.sh
+          follow_redirects: safe
