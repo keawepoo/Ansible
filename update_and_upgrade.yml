@@ -2,6 +2,6 @@
 - hosts: Linux
   become: true
 
-  tasks:
-    - name: Update
-      cmd: apt update
+- name: run show version on remote devices
+  ansible.netcommon.cli_command:
+    command: show version
