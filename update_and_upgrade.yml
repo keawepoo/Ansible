@@ -1,12 +1,7 @@
 ---
-- hosts: all
+- hosts: Linux
   become: true
 
   tasks:
     - name: Update
-      apt:
-        name: update
-
-    - name: Upgrade
-      apt:
-        name: upgrade
+      cmd: apt update
