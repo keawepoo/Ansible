@@ -1,0 +1,8 @@
+---
+  - name: nano
+    hosts: Linux
+    tasks:
+      - name: ensure nano is there
+        apt:
+         name: nano
+         state: latest
