@@ -2,6 +2,7 @@
 - hosts: Linux
   become: true
 
-- name: run show version on remote devices
-  ansible.netcommon.cli_command:
-    command: show version
+  tasks:
+    - name: run show version on remote devices
+      ansible.netcommon.cli_command:
+      command: show version
