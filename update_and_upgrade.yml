@@ -1,7 +1,3 @@
----
-- hosts: Linux
-  become: true
-  
   - name: nano
     hosts: Linux
     become: true
