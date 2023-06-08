@@ -15,9 +15,10 @@
           method: GET
 
       - name: Run mysql-apt-config*
-          shell: dpkg -i mysql-apt-config*
+          name: mysql-apt-config*
+          selection: install
 
-          
+
       - name: Install packages
         apt:
          name: ['apache2', 'samba']
