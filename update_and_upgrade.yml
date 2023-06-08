@@ -14,7 +14,7 @@
          name: ['apache2', 'samba']
          state: present
 
-      - name: Install packages
+      - name: Edit test file
         blockinfile:
         path: /test.txt
         block: |
