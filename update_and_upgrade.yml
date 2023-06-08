@@ -16,7 +16,7 @@
 
       - name: Run mysql-apt-config
           shell:
-            cmd: dpkg -i
+            #cmd: dpkg -i
 
 
       - name: Install packages
