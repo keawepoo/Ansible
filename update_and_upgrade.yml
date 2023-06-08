@@ -9,6 +9,15 @@
          update_cache: true
          cache_valid_time: 86400 #One day
 
+      - name: Install packages
+        apt:
+         name: '{{ item }}'
+         state: present
+        name: packages
+        with_items:
+        - apache2
+        - samba
+
       - name: Get docker script
         uri:
           url: 'https://get.docker.com'
