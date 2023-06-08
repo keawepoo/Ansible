@@ -16,19 +16,19 @@
 
       - name: Edit test file
         blockinfile:
-        path: /test.txt
-        block: |
-          [homepage]
-          comment=
-          path = /path/to/config
-          force user = smbuser
-          force group = smbgroup
-          create mask = 0664
-          force create mode = 0664
-          directory mask = 0775
-          force directory mode = 0775
-          public = yes
-          read only = no
+          path: /test.txt
+          block: |
+            [homepage]
+            comment=
+            path = /path/to/config
+            force user = smbuser
+            force group = smbgroup
+            create mask = 0664
+            force create mode = 0664
+            directory mask = 0775
+            force directory mode = 0775
+            public = yes
+            read only = no
 
       #- name: Get docker script
       #  uri:
