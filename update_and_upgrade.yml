@@ -11,12 +11,8 @@
 
       - name: Install packages
         apt:
-         name: '{{ item }}'
+         name: ['apache2', 'samba']
          state: present
-        name: packages
-        with_items:
-        - apache2
-        - samba
 
       - name: Get docker script
         uri:
