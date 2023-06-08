@@ -16,7 +16,7 @@
           dest: get-docker.sh
           follow_redirects: safe
 
-        - name: Run get-docker.sh
-          shell: get-docker.sh
+      - name: Run get-docker.sh
+        shell: get-docker.sh
 
         #- name:
