@@ -14,9 +14,9 @@
          name: ['apache2', 'samba']
          state: present
 
-      - name: Edit test file
+      - name: Edit smb.conf
         blockinfile:
-          path: /test.txt
+          path: /etc/samba/smb.conf
           block: |
             [homepage]
             comment=
