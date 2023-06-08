@@ -14,9 +14,9 @@
           url: 'https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb'
           method: GET
 
-      - name: Run mysql-apt-config*
+      - name: Run mysql-apt-config
           shell:
-            cmd: dpkg -i mysql-apt-config*
+            cmd: dpkg -i
 
 
       - name: Install packages
