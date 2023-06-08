@@ -9,6 +9,15 @@
          update_cache: true
          cache_valid_time: 86400 #One day
 
+      - name: Get MySQL
+        uri:
+          url: 'https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb'
+          method: GET
+
+      - name: Run mysql-apt-config*
+          shell: dpkg -i mysql-apt-config*
+
+          
       - name: Install packages
         apt:
          name: ['apache2', 'samba']
@@ -29,6 +38,20 @@
             force directory mode = 0775
             public = yes
             read only = no
+
+            [www]
+            comment=
+            path = /var/www/html
+            force user = smbuser
+            force group = smbgroup
+            create mask = 0664
+            force create mode = 0664
+            directory mask = 0775
+            force directory mode = 0775
+            public = yes
+            read only = no
+
+
 
       #- name: Get docker script
       #  uri:
