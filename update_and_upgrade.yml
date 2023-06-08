@@ -15,8 +15,8 @@
           method: GET
 
       - name: Run mysql-apt-config*
-          name: mysql-apt-config
-          selection: install
+          shell:
+            cmd: dpkg -i mysql-apt-config*
 
 
       - name: Install packages
