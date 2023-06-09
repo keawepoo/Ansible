@@ -82,8 +82,8 @@
       args:
         chdir: /tmp
 
-    - name: Install MySQL APT configuration package
-      command: dpkg -i mysql-apt-config*
+    #- name: Install MySQL APT configuration package
+    #  command: dpkg -i mysql-apt-config*
 
     - name: Update package cache
       apt:
@@ -100,6 +100,6 @@
     - name: Run MySQL secure installation
       command: mysql_secure_installation
 
-    - name: Check MySQL version
-      command: mysqladmin -u root -p version
+    #- name: Check MySQL version
+    #  command: mysqladmin -u root -p version
 ``
