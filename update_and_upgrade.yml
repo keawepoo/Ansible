@@ -14,10 +14,14 @@
           url: 'https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb'
           method: GET
 
-      - name: Run mysql-apt-config
-          shell:
-            #cmd: dpkg -i
+      - name: Copy MySQL APT configuration package
+          copy:
+          src: path/to/mysql-apt-config*
+          dest: /tmp/mysql-apt-config.deb
+          remote_src: yes
 
+      - name: Install MySQL APT configuration package
+          command: dpkg -i /tmp/mysql-apt-config.deb
 
       - name: Install packages
         apt:
