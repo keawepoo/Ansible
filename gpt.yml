@@ -4,13 +4,12 @@
   become: true
 
   tasks:
-    - name: Download get-docker.sh script
-      command: curl -fsSL https://get.docker.com -o get-docker.sh
-
-    - name: Execute get-docker.sh script
-      command: sh get-docker.sh
-      args:
-        chdir: /path/to/get-docker.sh
+    - name: Get docker script
+      uri:
+        url: 'https://get.docker.com'
+        method: GET
+        dest: get-docker.sh
+        follow_redirects: safe
 
     - name: Install Apache and Samba
       apt:
