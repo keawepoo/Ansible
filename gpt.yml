@@ -1,6 +1,6 @@
 ---
 - name: Install Docker, Apache, Samba, and MySQL
-  hosts: your_host_group
+  hosts: Linux
   become: true
 
   tasks:
