@@ -1,0 +1,3 @@
+Remeber that you have to manually run 
+dpkg -i mysql-apt-config*
+sh get-docker.sh
