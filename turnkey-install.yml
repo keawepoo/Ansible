@@ -1,5 +1,5 @@
 ---
-- name: Install Docker, Apache, Samba, and MySQL
+- name: Fresh install for Turnkey
   hosts: Linux
   become: true
 
