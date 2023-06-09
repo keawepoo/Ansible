@@ -97,8 +97,8 @@
     - name: Reload Apache service
       command: systemctl reload apache2
 
-    - name: Run MySQL secure installation
-      command: mysql_secure_installation
+    #- name: Run MySQL secure installation
+    #  command: mysql_secure_installation
 
     #- name: Check MySQL version
     #  command: mysqladmin -u root -p version
