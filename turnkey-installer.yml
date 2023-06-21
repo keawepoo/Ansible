@@ -1,5 +1,5 @@
 ---
-- name: Fresh install for Turnkey
+- name: Fresh install for Turnkey VM Docker
   hosts: Linux
   become: true
 
